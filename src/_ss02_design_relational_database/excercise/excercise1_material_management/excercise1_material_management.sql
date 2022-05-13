@@ -1,5 +1,5 @@
--- create DATABASE `quan_ly_vat_tu`;
--- use `quan_ly_vat_tu`;
+create DATABASE `quan_ly_vat_tu`;
+use `quan_ly_vat_tu`;
 
 CREATE TABLE `vat_tu` (
     `ma_vat_tu` INT PRIMARY KEY,
@@ -44,6 +44,12 @@ CREATE TABLE `nha_cung_cap` (
     `ten_nha_cung_cap` VARCHAR(100) NOT NULL,
     `dia_chi` VARCHAR(255),
     `so_dien_thoai` VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE `sdt_nha_cung_cap` (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    `ma_nha_cung_cap` INT not null,
+    FOREIGN KEY (`ma_nha_cung_cap`) REFERENCES `nha_cung_cap` (`ma_nha_cung_cap`)
 );
 
 CREATE TABLE `cung_cap` (
