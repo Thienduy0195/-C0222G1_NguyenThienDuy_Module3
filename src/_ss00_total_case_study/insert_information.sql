@@ -64,8 +64,8 @@ use furama_resort;
 
 -- 9.chèn dịch vụ
 	insert into dich_vu (ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, ma_kieu_thue, ma_loai_dich_vu, tieu_chuan_phong, mo_ta_tien_nghi_khac, dien_tich_ho_boi, so_tang)
-	values  ('Villa1', 100, 500, 6, 2, 2,'V.I.P', null,40,3), 
-    ('Villa2', 150, 650, 10, 2, 2,'V.I.P', 'Phòng thiền',50,4),
+	values  ('Villa1', 100, 500, 6, 1, 2,'V.I.P', null,40,3), 
+    ('Villa2', 150, 650, 10, 1, 2,'V.I.P', 'Phòng thiền',50,4),
 			('House1', 70, 200, 10, 2, 2,'standard',null,40,6),       
 			('Room1', 40, 50, 2, 2, 3,'Luxury','Giường đôi',null,null);    
 	        
@@ -87,6 +87,18 @@ use furama_resort;
 	values  (2,2,2),
 			(2,3,6),
 	        (3,2,10);
+            
+		insert into hop_dong_chi_tiet (ma_hop_dong, ma_dich_vu_di_kem, so_luong)
+	values  (1,1,2),
+			(4,2,2),
+			(5,3,3),
+			(6,4,1),
+			(7,3,1),
+			(8,2,2),
+			(9,1,4),
+			(10,2,6),
+			(11,3,1),
+	        (12,4,2);
 
 -- 13.chèn thêm nhân viên cho task 2
 	insert into nhan_vien (ma_vi_tri, ma_trinh_do, ma_bo_phan, ho_ten, ngay_sinh, so_cmnd, luong, so_dien_thoai, em_mail, dia_chi) 
@@ -122,3 +134,14 @@ use furama_resort;
 			('2023-06-12 13:14:00','2023-06-22 12:00:00',200,2,8,1),
 			('2023-06-12 13:14:00','2023-06-22 12:00:00',200,2,10,1),
 	        ('2023-06-12 15:16:00','2023-06-22 12:00:00',200,3,11,1);
+            
+	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2021-01-12 12:12:00','2021-04-22 12:00:00',100,1,8,1),
+			('2021-02-12 13:14:00','2021-05-22 12:00:00',150,2,9,2),
+			('2021-01-12 13:14:00','2021-06-22 12:00:00',200,2,10,2),
+	        ('2021-03-12 15:16:00','2021-03-22 12:00:00',220,3,11,3);
+            
+-- insert thêm hợp đồng cho task 7
+	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2020-01-12 12:12:00','2020-04-22 12:00:00',100,1,8,4),
+	        ('2020-03-12 15:16:00','2020-03-22 12:00:00',220,3,11,4);

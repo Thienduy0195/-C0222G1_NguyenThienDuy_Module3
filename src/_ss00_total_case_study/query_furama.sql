@@ -19,3 +19,27 @@ join hop_dong h on k.ma_khach_hang=h.ma_khach_hang
 join loai_khach l on k.ma_loai_khach = l.ma_loai_khach 
 where ten_loai_khach ="Diamond" group by k.ma_khach_hang order by so_luong;
 
+-- TASK 5
+
+select k.ma_khach_hang, k.ho_ten, l.ten_loai_khach, h.ma_hop_dong, d.ten_dich_vu, 
+h.ngay_lam_hop_dong, h.ngay_ket_thuc, (d.chi_phi_thue + hd.so_luong * dv.gia) as tong_tien 
+from khach_hang k 
+left join loai_khach l on l.ma_loai_khach = k.ma_loai_khach
+left join hop_dong h on h.ma_khach_hang = k.ma_khach_hang
+left join dich_vu d on d.ma_dich_vu = h.ma_dich_vu
+left join hop_dong_chi_tiet hd on h.ma_hop_dong = hd.ma_hop_dong
+left join dich_vu_di_kem dv on hd.ma_dich_vu_di_kem = dv.ma_dich_vu_di_kem;
+
+-- TASK 6
+
+select dv.ma_dich_vu, dv.ten_dich_vu, dv.dien_tich, dv.chi_phi_thue, ldv.ten_loai_dich_vu, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc 
+from loai_dich_vu ldv join dich_vu dv on dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
+join hop_dong hd on hd.ma_dich_vu = dv.ma_dich_vu where not (year(ngay_lam_hop_dong) = 2021 and month(ngay_lam_hop_dong) in (1,2,3));
+
+-- TASK 7
+
+select dv.ma_dich_vu, dv.ten_dich_vu, dv.dien_tich, dv.so_nguoi_toi_da, dv.chi_phi_thue, ldv.ten_loai_dich_vu, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc 
+from loai_dich_vu ldv join dich_vu dv on dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
+join hop_dong hd on hd.ma_dich_vu = dv.ma_dich_vu where (dv.ma_dich_vu in (select hd.ma_dich_vu from hop_dong having (year(hd.ngay_lam_hop_dong) =2020)) and dv.ma_dich_vu not in (select hd.ma_dich_vu from hop_dong having (year(hd.ngay_lam_hop_dong) =2021))) group by dv.ten_dich_vu;
+
+
