@@ -96,10 +96,29 @@ use furama_resort;
         (2,3,3,'Tony Kroos','2000-06-15','205789465','8000000','0909235678','kroos@thaco.com','Germany');
         
         
-        -- 14.chèn thêm khách hàng
+-- 14.chèn thêm khách hàng
 	insert into khach_hang (ma_loai_khach, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi)
 	values  (3,'Trần Đình Long','1970-05-14', 1,'205898987','0905656989','dinhlong@gmail.com','Đà Nẵng'),         
 			(2,'Trần Bá Dương','1975-02-15', 1,'253869854','0989456325','duongtran@gmail.com','Quảng Nam'),
             (2,'Đoàn Nguyên Đức','1978-08-24', 0,'248798649','0965656565','ducdoan@gmail.com','Quảng Trị');
+	
+	insert into khach_hang (ma_loai_khach, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi)
+	values  (1,'Nguyễn Thiên Duy','1995-01-01', 1,'253689546','0917579123','thienduy@gmail.com','Đà Nẵng'),         
+			(1,'Nguyễn Công Tranh','1962-10-04', 1,'205898965','0905666175','congtranh@gmail.com','Quảng Nam'),
+			(1,'Nguyễn Thị Thùy Dương','1966-09-15', 0,'205898965','0906456789','thuyduong@gmail.com','Quảng Nam'),
+            (1,'Nguyễn Thị Diệu Huyền','1996-06-17', 0,'206016576','0903112666','dieuhuyen@gmail.com','Quảng Bình');
             
+-- 15.Chèn thêm hợp đồng
+
+	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2022-06-12 12:12:00','2022-06-22 12:00:00',300,1,8,1),
+			('2022-06-12 13:14:00','2022-06-22 12:00:00',100,2,9,1),
+			('2022-06-12 13:14:00','2022-06-22 12:00:00',100,2,10,1),
+	        ('2022-06-12 15:16:00','2022-06-22 12:00:00',20,3,11,1);
             
+	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2023-06-12 12:12:00','2023-06-22 12:00:00',200,1,8,1),
+			('2023-06-12 13:14:00','2023-06-22 12:00:00',200,2,9,1),
+			('2023-06-12 13:14:00','2023-06-22 12:00:00',200,2,8,1),
+			('2023-06-12 13:14:00','2023-06-22 12:00:00',200,2,10,1),
+	        ('2023-06-12 15:16:00','2023-06-22 12:00:00',200,3,11,1);

@@ -7,14 +7,11 @@ name VARCHAR (50) not null,
 age int
 );
 
-INSERT INTO customer(name, age) VALUES("nguyen van a",25);
-INSERT INTO customer(name, age) VALUES("nguyen van b",23);
-
 create table `order`(
 id int PRIMARY key AUTO_INCREMENT,
 customer_id int not null,
 date DATE,
-total_price DOUBLE not null,
+total_price DOUBLE,
 FOREIGN KEY (customer_id) REFERENCES customer (id)
 );
 
