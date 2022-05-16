@@ -145,3 +145,10 @@ use furama_resort;
 	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
 	values  ('2020-01-12 12:12:00','2020-04-22 12:00:00',100,1,8,4),
 	        ('2020-03-12 15:16:00','2020-03-22 12:00:00',220,3,11,4);
+            
+-- 16. Chèn thêm khách để trùng tên cho task 8
+
+	insert into khach_hang (ma_loai_khach, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi)
+	values  (1,'Nguyễn Đăng Quang','1990-05-14', 1,'206024579','0904124569','dangquang@gmail.com','Bạc Liêu'),         
+			(2,'Đặng Lê Nguyên Vũ','1999-02-15', 1,'206564789','0906235648','nguyenvu@gmail.com','Bắc Ninh'),
+	        (3,'Phạm Nhật Vượng','1999-02-25', 1,'023154621','0905634586','nhatvuong@gmail.com','Cà Mau');   

@@ -2,8 +2,12 @@
     use furama_resort;
 	
 -- TASK 2
-	SELECT * FROM nhan_vien
-    WHERE (ho_ten LIKE 'h%' OR ho_ten LIKE 'k%'
+	SELECT 
+    *
+FROM
+    nhan_vien
+WHERE
+    (ho_ten LIKE 'h%' OR ho_ten LIKE 'k%'
         OR ho_ten LIKE 't%')
         AND LENGTH(ho_ten) <= 15;
 	
@@ -40,6 +44,20 @@ join hop_dong hd on hd.ma_dich_vu = dv.ma_dich_vu where not (year(ngay_lam_hop_d
 
 select dv.ma_dich_vu, dv.ten_dich_vu, dv.dien_tich, dv.so_nguoi_toi_da, dv.chi_phi_thue, ldv.ten_loai_dich_vu, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc 
 from loai_dich_vu ldv join dich_vu dv on dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
-join hop_dong hd on hd.ma_dich_vu = dv.ma_dich_vu where (dv.ma_dich_vu in (select hd.ma_dich_vu from hop_dong having (year(hd.ngay_lam_hop_dong) =2020)) and dv.ma_dich_vu not in (select hd.ma_dich_vu from hop_dong having (year(hd.ngay_lam_hop_dong) =2021))) group by dv.ten_dich_vu;
+join hop_dong hd on hd.ma_dich_vu = dv.ma_dich_vu 
+where (dv.ma_dich_vu in (select hd.ma_dich_vu from hop_dong 
+having (year(hd.ngay_lam_hop_dong) =2020)) 
+and dv.ma_dich_vu 
+not in (select hd.ma_dich_vu from hop_dong 
+having (year(hd.ngay_lam_hop_dong) =2021))) 
+group by dv.ten_dich_vu;
 
+-- TASK 8
+-- XUẤT RA HỌ TÊN KHÔNG TRÙNG NHAU THEO 3 CÁCH
+
+-- CÁCH 1 
+select ho_ten from khach_hang group by ho_ten;
+-- CÁCH 2
+select distinct ho_ten from khach_hang;
+-- CÁCH 3
 
