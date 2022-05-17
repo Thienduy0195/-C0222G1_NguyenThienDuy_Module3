@@ -67,7 +67,13 @@ use furama_resort;
 	values  ('Villa1', 100, 500, 6, 1, 2,'V.I.P', null,40,3), 
     ('Villa2', 150, 650, 10, 1, 2,'V.I.P', 'Phòng thiền',50,4),
 			('House1', 70, 200, 10, 2, 2,'standard',null,40,6),       
-			('Room1', 40, 50, 2, 2, 3,'Luxury','Giường đôi',null,null);    
+			('Room1', 40, 50, 2, 2, 3,'Luxury','Giường đôi',null,null);
+            
+	insert into dich_vu (ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, ma_kieu_thue, ma_loai_dich_vu, tieu_chuan_phong, mo_ta_tien_nghi_khac, dien_tich_ho_boi, so_tang)
+	values  ('Villa3', 100, 500, 6, 1, 2,'Luxury', null,40,3), 
+			('House2', 150, 650, 10, 1, 2,'V.I.P', 'Phòng thiền',50,4),     
+			('Room2', 40, 50, 2, 2, 3,'Luxury','Giường đôi',null,null),
+			('House3', 70, 200, 10, 2, 2,'standard',"xông hơi",40,6);    
 	        
 -- 10.chèn khách hàng
 	insert into khach_hang (ma_loai_khach, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi)
@@ -151,4 +157,67 @@ use furama_resort;
 	insert into khach_hang (ma_loai_khach, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi)
 	values  (1,'Nguyễn Đăng Quang','1990-05-14', 1,'206024579','0904124569','dangquang@gmail.com','Bạc Liêu'),         
 			(2,'Đặng Lê Nguyên Vũ','1999-02-15', 1,'206564789','0906235648','nguyenvu@gmail.com','Bắc Ninh'),
-	        (3,'Phạm Nhật Vượng','1999-02-25', 1,'023154621','0905634586','nhatvuong@gmail.com','Cà Mau');   
+	        (3,'Phạm Nhật Vượng','1999-02-25', 1,'023154621','0905634586','nhatvuong@gmail.com','Cà Mau');  
+            
+-- chèn thêm khách cho task 11
+
+	insert into khach_hang (ma_loai_khach, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi)
+	values  (1,'Nguyễn Tấn Dũng','1960-05-14', 1,'203021547','0905214545','tandung@gmail.com','Quảng Ngãi'),         
+			(1,'Nguyễn Xuân Phúc','1958-05-06', 1,'205012457','0906555655','xuanphuc@gmail.com','Vinh'),
+	        (1,'Phạm Minh Chính','1956-02-25', 1,'203021479','0915215236','minhchinh@gmail.com','Vinh'); 
+            
+-- Chèn thêm hợp đồng cho task 11
+	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2022-08-12 12:12:00','2022-08-22 12:00:00',200,5,15,1),
+			('2022-08-12 13:14:00','2022-08-22 12:00:00',200,6,16,2),
+			('2022-08-12 13:14:00','2022-08-22 12:00:00',200,7,17,3);
+            
+	insert into hop_dong_chi_tiet (ma_hop_dong, ma_dich_vu_di_kem, so_luong)
+	values  (18,2,2),
+			(19,3,3),
+	        (20,2,4);
+            
+	insert into hop_dong_chi_tiet (ma_hop_dong, ma_dich_vu_di_kem, so_luong)
+	values  (20,1,1),
+			(21,1,1);
+            
+	-- Chèn thêm hợp đồng cho task 12
+    
+    	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2020-12-12 12:12:00','2020-12-22 12:00:00',100,5,15,1),
+			('2020-10-12 13:14:00','2020-10-22 12:00:00',20,6,16,3),
+			('2020-11-12 13:14:00','2020-11-22 12:00:00',220,6,16,1),
+			('2021-03-12 13:14:00','2021-03-22 12:00:00',150,6,16,2),
+			('2021-01-12 13:14:00','2021-01-22 12:00:00',20,6,16,2),
+			('2021-05-12 13:14:00','2021-05-22 12:00:00',100,7,17,4);
+            
+	insert into hop_dong_chi_tiet (ma_hop_dong, ma_dich_vu_di_kem, so_luong)
+	values  (13,1,1),
+			(14,2,2),
+			(15,2,2),
+			(16,3,4),
+			(17,1,2),
+			(22,4,5),
+			(23,2,6),
+			(24,3,2),
+			(25,2,2),
+			(26,1,4),
+			(27,4,3);
+            
+	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2021-12-12 12:12:00','2021-12-22 12:00:00',100,5,15,1);
+    
+	insert into hop_dong_chi_tiet (ma_hop_dong, ma_dich_vu_di_kem, so_luong)
+	values  (28,1,2);
+    
+        	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2021-12-12 12:12:00','2021-12-22 12:00:00',100,5,15,5),
+			('2021-10-12 13:14:00','2021-10-22 12:00:00',20,6,16,6);
+            
+                    	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+	values  ('2020-12-12 12:12:00','2020-12-22 12:00:00',100,5,15,5),
+			('2020-10-12 13:14:00','2020-10-22 12:00:00',20,6,16,6);
+            
+            	insert into hop_dong_chi_tiet (ma_hop_dong, ma_dich_vu_di_kem, so_luong)
+	values  (31,1,4),
+			(32,2,2);

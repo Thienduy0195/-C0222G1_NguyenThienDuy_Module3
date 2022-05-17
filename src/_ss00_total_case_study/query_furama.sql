@@ -60,4 +60,48 @@ select ho_ten from khach_hang group by ho_ten;
 -- CÁCH 2
 select distinct ho_ten from khach_hang;
 -- CÁCH 3
+select ho_ten from khach_hang union select ho_ten from khach_hang;
 
+-- TASK 9
+
+SELECT month(ngay_lam_hop_dong) as thang, count(month(ngay_lam_hop_dong)) as so_luong_khach_hang from hop_dong where year (ngay_lam_hop_dong) =2021 group by thang;
+
+-- TASK 10
+
+select hd.ma_hop_dong, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, hd.tien_dat_coc, sum(hdct.so_luong) as so_luong_dich_vu_di_kem
+from hop_dong hd
+join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
+join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem group by hd.ma_hop_dong order by  hd.ma_hop_dong;
+
+-- TASK 11
+
+select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem, dvdk.gia, dvdk.don_vi, dvdk.trang_thai, lk.ten_loai_khach, kh.dia_chi
+from loai_khach lk
+join khach_hang kh on lk.ma_loai_khach = kh.ma_loai_khach
+join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
+join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
+join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+where lk.ten_loai_khach = "Diamond" and (kh.dia_chi = "Vinh" or kh.dia_chi = "Quảng Ngãi");
+
+-- TASK 12
+
+
+select hd.ma_hop_dong, hd.ngay_lam_hop_dong, nv.ho_ten ten_nhan_vien, kh.ho_ten ten_khach_hang, 
+kh.so_dien_thoai so_dien_thoai_khach_hang, dv.ten_dich_vu, 
+hd.tien_dat_coc, sum(hdct.so_luong) as so_luong_dich_vu_di_kem
+from dich_vu dv
+join hop_dong hd on dv.ma_dich_vu = hd.ma_dich_vu
+join nhan_vien nv on nv.ma_nhan_vien = hd.ma_nhan_vien
+join khach_hang kh on hd.ma_khach_hang = kh.ma_khach_hang
+join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
+where (select quarter(ngay_lam_hop_dong) having year(ngay_lam_hop_dong)=2020)=4
+and quarter(ngay_lam_hop_dong) not in (select quarter(ngay_lam_hop_dong) having year(ngay_lam_hop_dong)=2021 in (1,2))
+group by dv.ma_dich_vu;
+
+-- TASK 13
+
+select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem,count(dvdk.ma_dich_vu_di_kem) so_lan_su_dung, dvdk.gia, dvdk.don_vi, dvdk.trang_thai
+from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+group by dvdk.ma_dich_vu_di_kem
+having count(so_lan_su_dung) in (select max(count(so_lan_su_dung)) from hop_dong_chi_tiet);
