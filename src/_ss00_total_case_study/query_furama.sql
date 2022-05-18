@@ -99,9 +99,27 @@ and quarter(ngay_lam_hop_dong) not in (select quarter(ngay_lam_hop_dong) having 
 group by dv.ma_dich_vu;
 
 -- TASK 13
-
-select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem,count(dvdk.ma_dich_vu_di_kem) so_lan_su_dung, dvdk.gia, dvdk.don_vi, dvdk.trang_thai
+create view dich_vu_di_kem_view as
+select sum(hdct.so_luong) so_lan_su_dung, dvdk.ten_dich_vu_di_kem, 
+ dvdk.gia, dvdk.don_vi, dvdk.trang_thai
 from dich_vu_di_kem dvdk
 join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+group by dvdk.ma_dich_vu_di_kem ;
+
+select ten_dich_vu_di_kem,so_lan_su_dung, 
+ gia, don_vi, trang_thai from dich_vu_di_kem_view
+ where so_lan_su_dung in (select max(so_lan_su_dung) from dich_vu_di_kem_view);
+
+-- TASK 14
+
+select hd.ma_hop_dong, ldv.ten_loai_dich_vu, dvdk.ten_dich_vu_di_kem, 
+count(dvdk.ma_dich_vu_di_kem) so_lan_su_dung
+from hop_dong hd
+join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu
+join loai_dich_vu ldv on dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
+join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
+join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 group by dvdk.ma_dich_vu_di_kem
-having count(so_lan_su_dung) in (select max(count(so_lan_su_dung)) from hop_dong_chi_tiet);
+having so_lan_su_dung = 4;
+
+-- hiện tại chưa chèn dịch vụ đi kèm có số lần sử dụng là 1
