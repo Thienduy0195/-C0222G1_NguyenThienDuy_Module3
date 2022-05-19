@@ -221,3 +221,15 @@ use furama_resort;
             	insert into hop_dong_chi_tiet (ma_hop_dong, ma_dich_vu_di_kem, so_luong)
 	values  (31,1,4),
 			(32,2,2);
+            
+-- CHÈN THÊM NHÂN VIÊN VÀ KHÁCH HÀNG CHO TASK 20
+	insert into khach_hang (ma_loai_khach, ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi)
+	values  (2,'Nguyễn Thế Thanh','1967-05-14', 1,'206212589','0902123657','thethanh@gmail.com','Quảng Bình'),         
+			(2,'Nguyễn Thị Liễu','1969-02-15', 0,'206425879','0931456325','thilieu@gmail.com','Quảng Bình'),
+	        (2,'Trần Nhật Minh','1984-02-25', 1,'023588796','0979212357','nhatminh@gmail.com','Bình Dương'); 
+            
+	insert into nhan_vien (ma_vi_tri, ma_trinh_do, ma_bo_phan, ho_ten, ngay_sinh, so_cmnd, luong, so_dien_thoai, em_mail, dia_chi) 
+	values  (2,2,2,'John Cena','1989-02-02','205265659','5000000','0903365698','cena@gmail.com','United State'),        
+	(3,1,2,'The Rock','1985-03-03','203156469','10000000','0903256369','therock@gmail.com','United State');
+            
+
