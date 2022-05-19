@@ -14,7 +14,7 @@ where (ho_ten like 'h%' or ho_ten like 'k%'
 # 3.	Hiển thị thông tin của tất cả khách hàng 
 # có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 	select * from khach_hang
-	where ngay_sinh having (timestampdiff(year, ngay_sinh, current_date()) between 18 and 50)
+	where (timestampdiff(year, ngay_sinh, current_date()) between 18 and 50)
 	and dia_chi = 'Đà Nẵng' or dia_chi = 'Quảng Trị';
     
 -- TASK 4
@@ -33,14 +33,15 @@ where ten_loai_khach ="Diamond" group by k.ma_khach_hang order by so_luong;
 # Chi Phí Thuê + Số Lượng * Giá, với Số Lượng và Giá là từ bảng dich_vu_di_kem, hop_dong_chi_tiet) 
 # cho tất cả các khách hàng đã từng đặt phòng. (những khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
 
-select k.ma_khach_hang, k.ho_ten, l.ten_loai_khach, h.ma_hop_dong, d.ten_dich_vu, 
-h.ngay_lam_hop_dong, h.ngay_ket_thuc, (d.chi_phi_thue + hd.so_luong * dv.gia) as tong_tien 
-from khach_hang k 
-left join loai_khach l on l.ma_loai_khach = k.ma_loai_khach
-left join hop_dong h on h.ma_khach_hang = k.ma_khach_hang
-left join dich_vu d on d.ma_dich_vu = h.ma_dich_vu
-left join hop_dong_chi_tiet hd on h.ma_hop_dong = hd.ma_hop_dong
-left join dich_vu_di_kem dv on hd.ma_dich_vu_di_kem = dv.ma_dich_vu_di_kem;
+select kh.ma_khach_hang, kh.ho_ten, lk.ten_loai_khach, hd.ma_hop_dong, dv.ten_dich_vu, 
+hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, (dv.chi_phi_thue + hdct.so_luong * dvdk.gia) as tong_tien 
+from khach_hang kh 
+left join loai_khach lk on lk.ma_loai_khach = kh.ma_loai_khach
+left join hop_dong hd on hd.ma_khach_hang = kh.ma_khach_hang
+left join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
+left join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
+left join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem 
+group by kh.ma_khach_hang;
 
 -- TASK 6
 # 6.	Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu  
@@ -169,7 +170,14 @@ having so_lan_lap_hop_dong <=3;
 
 -- TASK 16
 # 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+# chuyển khóa ngoại ma_nhan_vien bên hợp đồng thành có thể null vì trước đó quy định not null
+alter table hop_dong modify ma_nhan_vien int;
+# khóa liên kết thông qua khóa ngoại
+alter table hop_dong drop foreign key hop_dong_ibfk_1;
+# Tạo lại khóa ngoại với thêm điều kiện delete thì set về null
+alter table hop_dong add foreign key (ma_nhan_vien) references nhan_vien (ma_nhan_vien) on delete set null;
 
+# Tiến hành xóa nhân viên mà không sợ ảnh hưởng đến hợp đồng
 delete from nhan_vien nv 
 where nv.ma_nhan_vien not in (select hop_dong.ma_nhan_vien 
 from hop_dong
