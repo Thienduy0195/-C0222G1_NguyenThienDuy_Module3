@@ -1,0 +1,113 @@
+
+#header {
+    background-color: orangered;
+    height: 68px;
+    width: 100%;
+}
+
+#title {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 25px;
+}
+
+.parent {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    line-height: 3px;
+}
+
+.sidebar {
+    background-color: whitesmoke;
+    height: 500px;
+    width: 20%;
+    float: left;
+    /*padding-left: 6px;*/
+}
+
+#story{
+    width: 110%;
+    height: 7%;
+    background-color: burlywood;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    line-height: 3px;
+}
+
+#truyen{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+#list{
+    font-size: 15px;
+    color: darkblue;
+    text-indent: 10px;
+}
+
+#list:hover{
+    color: chartreuse;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: lightcoral;
+}
+
+.main {
+    background-color: white;
+    height: 500px;
+    width: 80%;
+    float: left;
+}
+
+#footer {
+    text-indent: 10px;
+    color: white;
+    display: inline-block;
+    background-color: orangered;
+    height: 60px;
+    width: 100%;
+    clear: both;
+    line-height: 5px;
+    font-size: 12px;
+}
+
+ul li:hover{
+    color: darkblue;
+}
+
+.img{
+    float: left;
+    width: 20%;
+    height: 48%;
+    display: inline-block;
+}
+
+.img1{
+    display: flex;
+    width: 90%;
+    height: 90%;
+    padding: 2% 10% 20%;
+}
+
+.img2{
+    display: inline-block;
+    line-height: 1px;
+}
+
+.img1:hover{
+    height: 97%;
+    width: 97%;
+    transition: 0.5s;
+}

@@ -8,14 +8,17 @@ select *
 from nhan_vien
 where (ho_ten like 'h%' or ho_ten like 'k%'
         or ho_ten like 't%')
-        and length(ho_ten) <= 15;
+        and char_length(ho_ten) <= 15;
+	        -- sửa lại hàm char_length
 	
+select * from nhan_vien where ho_ten like concat(convert("H%",binary),"%");
+    
 -- TASK 3
 # 3.	Hiển thị thông tin của tất cả khách hàng 
 # có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 	select * from khach_hang
 	where (timestampdiff(year, ngay_sinh, current_date()) between 18 and 50)
-	and dia_chi = 'Đà Nẵng' or dia_chi = 'Quảng Trị';
+	and (dia_chi = 'Đà Nẵng' or dia_chi = 'Quảng Trị');
     
 -- TASK 4
 #4.	Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. 
@@ -81,7 +84,14 @@ select ho_ten from khach_hang union select ho_ten from khach_hang;
 # 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021 
 # thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
 
-SELECT month(ngay_lam_hop_dong) as thang, count(month(ngay_lam_hop_dong)) as so_luong_khach_hang from hop_dong where year (ngay_lam_hop_dong) =2021 group by thang order by month(ngay_lam_hop_dong);
+create table thang (
+thang int);
+
+insert into thang values(1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
+SELECT month(ngay_lam_hop_dong) as thang, count(month(ngay_lam_hop_dong)) as so_luong_khach_hang, th.thang
+from thang th
+left join hop_dong hd on 
+where year (ngay_lam_hop_dong) =2021 group by thang order by month(ngay_lam_hop_dong);
 
 -- TASK 10
 # 10.	Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm. 
@@ -191,7 +201,7 @@ where year(hop_dong.ngay_lam_hop_dong) between 2019 and 2021);
 -- Tạo view để lấy ra mã loại khách thỏa điều kiện đề bài (mã loại khách Diamond 2)
 create view w_khach_hang_can_cap_nhat 
 as select lk.ma_loai_khach, lk.ten_loai_khach, kh.ho_ten, hd.ngay_lam_hop_dong,
-(dv.chi_phi_thue + hdct.so_luong*dvdk.gia) as tong_tien_thanh_toan
+(dv.chi_phi_thue + coalesce ((hdct.so_luong*dvdk.gia),0)) as tong_tien_thanh_toan
 from loai_khach lk
 join khach_hang kh on lk.ma_loai_khach = kh.ma_loai_khach
 join hop_dong hd on hd.ma_khach_hang = kh.ma_khach_hang
@@ -200,6 +210,8 @@ join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
 join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 where year(hd.ngay_lam_hop_dong)=2021 and lk.ten_loai_khach ="Diamond"
 having tong_tien_thanh_toan >500;
+
+-- drop view w_khach_hang_can_cap_nhat ;
 
 -- Chỉnh sửa mã loại khách khách của những khách hàng có mã loại khách nằm trong view
 update khach_hang kh set kh.ma_loai_khach =1
@@ -245,4 +257,76 @@ select nv.ma_nhan_vien id, nv.ho_ten, nv.em_mail,
 nv.so_dien_thoai, nv.ngay_sinh, nv.dia_chi from nhan_vien nv
 union all select kh.ma_khach_hang id, kh.ho_ten, kh.email,
 kh.so_dien_thoai, kh.ngay_sinh, kh.dia_chi from khach_hang kh;
+
+-- TASK 21
+# 21.	Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” 
+# và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
+
+update nhan_vien set dia_chi="Hải Châu" where ma_nhan_vien =5;
+update nhan_vien set dia_chi="Hải Châu" where ma_nhan_vien =6;
+update nhan_vien set dia_chi="Hải Châu" where ma_nhan_vien =7;
+
+update hop_dong set ngay_lam_hop_dong = "2019-12-12 12:12:00" where ma_hop_dong =31;
+update hop_dong set ngay_lam_hop_dong = "2019-12-12 12:12:00" where ma_hop_dong =32;
+
+create view w_nhan_vien as 
+select nv.ma_nhan_vien, nv.ho_ten, nv.ngay_sinh, nv.so_cmnd, nv.luong, nv.so_dien_thoai,
+nv.em_mail, nv.dia_chi, hd.ngay_lam_hop_dong
+from nhan_vien nv
+join hop_dong hd on nv.ma_nhan_vien = hd.ma_nhan_vien
+where nv.dia_chi ="Hải Châu"
+and (year(hd.ngay_lam_hop_dong) = 2019 and month(hd.ngay_lam_hop_dong)=12 and day(hd.ngay_lam_hop_dong)=12)
+group by nv.ma_nhan_vien;
+
+
+-- TASK 22
+# 22. Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các nhân viên được nhìn thấy bởi khung nhìn này.
+
+update nhan_vien nv set dia_chi="Liên Chiểu" 
+where nv.ma_nhan_vien in (select ma_nhan_vien from w_nhan_vien);
+-- TASK 23
+# 23. Tạo Stored Procedure sp_xoa_khach_hang dùng để xóa thông tin của một khách hàng nào đó với ma_khach_hang được truyền vào như là 1 tham số của sp_xoa_khach_hang.
+
+delimiter //
+create procedure sp_xoa_khach_hang (in id int)
+begin
+declare error_ms varchar(250);
+delete from khach_hang where ma_khach_hang = id;
+end //
+delimiter ;
+call sp_xoa_khach_hang(1);
+
+# 24. Tạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong 
+# với yêu cầu sp_them_moi_hop_dong phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, 
+# với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
+
+
+delimiter //
+create procedure sp_them_moi_hop_dong (
+in nl_hop_dong datetime,
+n_ket_thuc datetime,
+t_dat_coc double,
+ma_nv int,
+ma_kh int,
+ma_dv int
+)
+begin
+if(ma_nv in (select ma_nhan_vien from nhan_vien)
+and ma_kh in (select ma_khach_hang from khach_hang)
+and ma_dv in (select ma_dich_vu from dich_vu))
+then insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu) 
+values (nl_hop_dong, n_ket_thuc, t_dat_coc, ma_nv, ma_kh, ma_dv);
+else SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Thông tin nhập vào không tồn tại ở một trường nào đó, vui lòng kiểm tra lại!' ;
+end if;
+end //
+delimiter ;
+
+-- drop procedure sp_them_moi_hop_dong;
+
+
+# gọi sp sp_them_moi_hop_dong, vì không có khách hàng id=99, nên sẽ ném ra MESSAGE TEXT=Thông tin nhập vào...
+call sp_them_moi_hop_dong("2022-06-12 13:14:00",'2022-06-22 12:00:00',100,2,99,1);
+# thêm mới thành công hợp đồng khi thỏa mãn điều kiện
+call sp_them_moi_hop_dong("2022-02-12 13:14:00",'2022-02-22 12:00:00',100,2,9,1);
 

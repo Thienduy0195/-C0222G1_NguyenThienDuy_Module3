@@ -1,0 +1,15 @@
+h1 {
+    background-color: gold;
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    padding: 3px;
+}
+h2{
+    color: blue;
+}
+
+p{
+    font-size: 25px;
+    color: blue;
+}
