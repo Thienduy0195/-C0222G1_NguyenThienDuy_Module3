@@ -1,0 +1,53 @@
+header{
+    background-color: darkblue;
+    color: white;
+}
+
+section{
+    display: flex;
+}
+
+nav{
+    background-color: burlywood;
+}
+
+h2{
+    text-indent: 10px;
+}
+
+p{
+    text-indent: 20px;
+}
+
+#a1{
+    background-color: gold;
+    display: inline-block;
+}
+
+#a2{
+    background-color: greenyellow;
+    display: inline-block;
+}
+
+#mainsection{
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+#mainaside{
+    width: 30%;
+    height: 345px;
+    float: left;
+    background-color: orange;
+    display: inline-block;
+}
+
+footer{
+display: flex;
+    clear: both;
+    color: white;
+    background-color: #323233;
+    height: 30px;
+    align-items: center;
+}
