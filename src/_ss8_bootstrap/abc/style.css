@@ -1,0 +1,56 @@
+body{
+    font-family: "Times New Roman", sans-serif;
+    color: brown;
+    font-weight: 300;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*.container{*/
+/*    padding: 0.3em 1em;*/
+/*}*/
+
+.header{
+    background: black;
+    color: white;
+    padding: 0.3em 1em;
+}
+
+.content{
+    background: #b1dfbb;
+    padding: 0.3em 1em;
+    margin-bottom: 1em;
+}
+
+.sidebar{
+    background: palevioletred;
+    padding: 0.3em 1em;
+    font-size: 95%;
+}
+
+@media screen and (min-width: 600px){
+    .main:before, .main:after{
+        content: "";
+        display: flex;
+        clear: both;
+    }
+
+    .main{
+        max-width: 100%;
+    }
+
+    .content{
+        width: 63.5%;
+        float: left;
+        margin-right: 1.5%;
+    }
+
+
+    .sidebar{
+        width: 35%;
+        float: left;
+    }
+
+}

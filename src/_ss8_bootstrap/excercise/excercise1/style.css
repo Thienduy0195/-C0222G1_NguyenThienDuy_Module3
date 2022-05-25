@@ -1,0 +1,23 @@
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    text-align: center;
+    border: 1px solid #23272b;
+    width: fit-content;
+    margin: 0 -12px;
+}
+
+.gallery:hover {
+    border: 2px solid #1c7430;
+
+}
+
+body {
+    font-size: 0.8em;
+}

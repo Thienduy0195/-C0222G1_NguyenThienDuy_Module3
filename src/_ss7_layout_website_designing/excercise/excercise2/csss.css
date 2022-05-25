@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 70em;
+}
+
+i {
+    font-size: 1.2em;
+    color: #b0b3b8;
+}
+
+.home div {
+    height: 3em;
+    width: 7em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+.home div:first-child {
+    border-bottom: 3px solid #2374e1;
+}
+
+header {
+    top: 0;
+    height: 3.5em;
+    width: 100%;
+    background-color: #202226;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    border-bottom: 2px solid #33373c;
+}
+
+header div {
+    display: flex;
+    cursor: pointer;
+}
+
+.search {
+    justify-content: start;
+    width: 25%;
+}
+
+.search input {
+    border-radius: 25px;
+    width: 15em;
+    background-color: #33373c;
+    border: none;
+    font-size: 1em;
+}
+
+.search input:focus {
+    outline-offset: 0px;
+    outline: none;
+    border: none;
+}
+
+.search i {
+    font-size: 2.2em;
+    color: #2374e1;
+    margin: 0 0.2em;
+}
+
+.home div:first-child i {
+    color: #2374e1;
+}
+
+.home div:hover {
+    background-color: rgba(131, 131, 131, 0.4);
+    transition: 0.2s;
+}
+
+.home {
+    justify-content: space-between;
+    width: 45%;
+}
+
+.menu {
+    justify-content: end;
+    width: 25%;
+}
+
+.menu div:first-child {
+    width: 4.5em;
+    background-color: #202226;
+}
+
+.menu p {
+    color: #fff;
+    font-size:.8em;
+    margin: 0 .4em;
+}
+
+.menu img {
+    width: 1.7em;
+    height: 1.7em;
+    border-radius:1em;
+}
+
+.menu div {
+    width: 2.2em;
+    height: 2.2em;
+    background-color: #33373c;
+    border-radius: 1.2em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.3em;
+}
+
+.menu div:hover {
+    background-color: #4f555d;
+    transition: 0.2s;
+}
+
+.body {
+    background-color: #1c1e21;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.5em;
+}
+
+.body_menu {
+    width: 20%;
+    background-color: #1c1e21;
+    height: 100%;
+}
+
+.body_menu div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 3em;
+    background-color: #1c1e21;
+    margin: 0.3em auto;
+    border-radius: 0.4em;
+    align-items: center;
+    cursor: pointer;
+}
+
+.body_menu div:hover {
+    background-color: rgba(131, 131, 131, 0.4);
+    transition: 0.2s;
+}
+
+.body_menu img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 0.5em;
+}
+
+.body_menu p {
+    font-size: 0.8em;
+    margin-left: 1em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.body_menu img:first-child {
+    width: 2em;
+    height: 2em;
+    margin-left: 0.5em;
+    border-radius: 1em;
+}
+
+.body_news {
+    width: 45%;
+    background-color: rgb(115, 153, 133);
+    height: 100%;
+}
+
+.body_message {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.box_advertisement {
+    width: 100%;
+    margin-top: 1em;
+    height:19em ;
+    border-bottom: 2px solid #33373c;
+
+}
+
+.advertisement {
+    display: flex;
+    border-radius:.5em;
+    width: 100%;
+    height: 9em;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+.advertisement p {
+    color: rgb(120, 120, 120);
+}
+
+.advertisement:hover {
+    background-color: #3a3b3c;
+}
+
+.body_message img {
+    height: 8em;
+    border-radius: .5em;
+    width: 8em;
+    align-items: center;
+    margin: 0 .5em;
+}
+.contact {
+    width: 100%;
+    margin-top: 1em;
+    height:100%;
+    flex-wrap: wrap;
+
+}
+
+.contact div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 3em;
+    background-color: #1c1e21;
+    margin: 0.5em auto;
+    border-radius: 0.4em;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.contact div:hover {
+    background-color: rgba(131, 131, 131, 0.4);
+    transition: 0.2s;
+}
+
+.contact div img {
+    width: 1.7em;
+    height: 1.7em;
+    border-radius:1em;
+}
+
+.contact div  {
+    color: #fff;
+    font-size:.9em;
+}
