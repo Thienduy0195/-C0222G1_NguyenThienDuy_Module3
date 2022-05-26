@@ -43,6 +43,10 @@ p{
     display: inline-block;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 footer{
 display: flex;
     clear: both;
