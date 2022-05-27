@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5fe8e9f1-11a9-4e80-bcdd-6bc0e55c6a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProductDiscountCalculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practice1/_ss9_sevrlet_jsp/.idea/_ss9_sevrlet_jsp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_ss7_layout_website_designing/excercise/excercise1_create_layout_with_html_and_css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_ss7_layout_website_designing/excercise/excercise1_create_layout_with_html_and_css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/src/main/java/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/excercise/customer-list/src/main/webapp/customer-list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice1/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice1/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice1/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice1/src/main/webapp/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice1/src/main/webapp/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice2/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice2/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_ss10_jsp_and_jstl/practice/practice2/src/main/webapp/dictionary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator_by_jsp/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../product_discount_calculator_by_jsp/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator_by_jsp/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../product_discount_calculator_by_jsp/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator_by_jsp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../product_discount_calculator_by_jsp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +83,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../product_discount_calculator_by_jsp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.57" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.57" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -133,11 +170,26 @@
       <option name="presentableId" value="Default" />
       <updated>1653555861151</updated>
       <workItem from="1653555867538" duration="520000" />
+      <workItem from="1653606929688" duration="1233000" />
+      <workItem from="1653633227538" duration="2567000" />
+      <workItem from="1653639688236" duration="73000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1653555980882">
@@ -148,10 +200,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="3" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728@0.0.1366.728" timestamp="1653555961410" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1653555967258">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1653636252372">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653555967258" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653636252372" />
     <state width="905" height="179" key="GridCell.Tab.0.bottom" timestamp="1653556390339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -200,5 +252,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="905" height="179" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1653556390339" />
+    <state x="65" y="0" key="new project wizard" timestamp="1653636266673">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1653636266673" />
   </component>
 </project>
