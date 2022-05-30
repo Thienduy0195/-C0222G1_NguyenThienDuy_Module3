@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(name = "ServletCalculator", urlPatterns = "/calculate")
 public class ServletCalculator extends HttpServlet {
@@ -16,16 +15,17 @@ public class ServletCalculator extends HttpServlet {
         float firstOperand = Float.parseFloat(request.getParameter("first-operand"));
         float secondOperand = Float.parseFloat(request.getParameter("second-operand"));
         char operator = request.getParameter("operator").charAt(0);
-        PrintWriter writer = response.getWriter();
-        writer.println("<html>");
-        writer.println("<h1 style= 'color:blue'>RESULT:</h1>");
         try {
             float result = Calculator.calculate(firstOperand, secondOperand, operator);
-            writer.println(firstOperand + " " + operator + " " + secondOperand + " = " + result);
+            request.setAttribute("result", "RESULT: " + firstOperand + " " +operator + " " + secondOperand + " = " + result);
+            request.setAttribute("firstOperand", firstOperand);
+            request.setAttribute("secondOperand", secondOperand);
+            request.setAttribute("operator", operator);
+            request.getRequestDispatcher("show-result.jsp").forward(request,response);
         } catch (Exception e) {
-            writer.println("Error: " + e.getMessage());
+            request.setAttribute("result", e.getMessage());
+            request.getRequestDispatcher("show-result.jsp").forward(request,response);
         }
-        writer.println("</html>");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

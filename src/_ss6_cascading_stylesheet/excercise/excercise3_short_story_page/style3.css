@@ -115,5 +115,5 @@ ul li:hover{
 .img1:hover{
     height: 97%;
     width: 97%;
-    transition: 0.5s;
+    /*transition: 0.5s;*/
 }

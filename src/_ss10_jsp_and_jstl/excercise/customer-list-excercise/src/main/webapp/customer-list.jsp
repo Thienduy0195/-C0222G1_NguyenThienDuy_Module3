@@ -32,7 +32,7 @@
         }
         .content{
             width: 60%;
-            margin: 0 auto;
+            margin: auto auto;
             background: orangered;
         }
 

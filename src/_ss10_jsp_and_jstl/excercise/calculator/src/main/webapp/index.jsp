@@ -15,11 +15,12 @@
       color: white;
       font-weight: bold;
       width: 500px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
-<form action="/calculate" method="post">
+<form action="calculate" method="post">
   <fieldset>
     <legend>Calculator</legend>
     <table>
