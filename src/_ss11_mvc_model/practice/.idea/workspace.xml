@@ -2,100 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="584d3532-84a2-4daa-aebc-27ea260da26f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/java/controllers/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/java/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/java/repository/IProductRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/java/repository/impl/ProductRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/java/services/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/java/services/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/webapp/Error_404.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/webapp/product/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/webapp/product/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/webapp/product/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/webapp/product/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/product-management-ex-11/src/main/webapp/product/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise/test/src/main/webapp/customer/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/controllers/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/repository/ICRUDRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/repository/IUsersRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/repository/impl/UsersRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/java/service/impl/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/webapp/user/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/webapp/user/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/src/main/webapp/user/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/src/main/java/com/codegym/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/src/main/java/com/codegym/dao/IUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/src/main/java/com/codegym/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/src/main/java/com/codegym/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/src/main/webapp/user/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/src/main/webapp/user/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management/src/main/webapp/user/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/classes/java/main/controllers/ProductServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/classes/java/main/models/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/classes/java/main/repository/IProductRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/classes/java/main/repository/impl/ProductRepoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/classes/java/main/services/IProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/classes/java/main/services/impl/ProductServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/libs/product_manegement-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/java/controllers/ProductServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/java/models/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/java/repository/IProductRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/java/repository/impl/ProductRepoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/java/services/IProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/java/services/impl/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/webapp/Error_404.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/webapp/product/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/webapp/product/delete.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/webapp/product/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/webapp/product/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise/product-management-excercise/src/main/webapp/product/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +25,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../_ss12_jdbc_and_crud/practice/user-management" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -131,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654041249623</updated>
       <workItem from="1654041250849" duration="42000" />
+      <workItem from="1654047732079" duration="84000" />
     </task>
     <servers />
   </component>

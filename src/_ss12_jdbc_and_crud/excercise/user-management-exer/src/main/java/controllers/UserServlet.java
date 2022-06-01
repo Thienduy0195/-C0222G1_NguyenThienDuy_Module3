@@ -99,7 +99,7 @@ public class UserServlet extends HttpServlet {
             case "edit":
                 showEditForm(request, response);
                 break;
-            case "delele":
+            case "delete":
                 break;
             case "search":
                 searchUser(request,response);
@@ -130,12 +130,6 @@ public class UserServlet extends HttpServlet {
     private void showList(HttpServletRequest request, HttpServletResponse response) {
         List<User> users = new ArrayList<>();
         users = userService.selectAllUser();
-        Collections.sort(users, new Comparator<User>() {
-            @Override
-            public int compare(User o1, User o2) {
-                return o1.getCountry().compareTo(o2.getCountry());
-            }
-        });
         request.setAttribute("listUser", users);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         try {

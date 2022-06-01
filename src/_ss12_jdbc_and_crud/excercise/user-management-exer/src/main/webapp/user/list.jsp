@@ -11,14 +11,19 @@
 <head>
     <title>USER MANAGEMENT</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <style>
+        table{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <center>
-    <div style="width: 500px; height: auto" align="center">
-        <h1>User Management</h1>
+    <div class="container" align="center">
+        <h1>USER MANAGEMENT</h1>
         <%-- Back to menu --%>
         <a href="/users">
-            <button type="button" class="btn btn-light">Home</button>
+            <button type="button" class="btn btn-primary">Home</button>
         </a>
         <%-- SEARCH --%>
         <form action="/users" method="get">
@@ -34,44 +39,48 @@
         <%-- Show List --%>
         <div align="center">
             <caption><h2>List of Users</h2></caption>
-            <table class="table  table-bordered table-secondary round">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Country</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="user" items="${listUser}">
+                <table class="table  table-bordered table-secondary round">
+                    <thead>
                     <tr>
-                        <td><c:out value="${user.id}"/></td>
-                        <td><c:out value="${user.name}"/></td>
-                        <td><c:out value="${user.email}"/></td>
-                        <td><c:out value="${user.country}"/></td>
-                        <td style="border: none" class="col-1">
-                            <a href="/users?action=edit&id=${user.id}">
-                                <button type="button" class="btn btn-primary">
-                                    Edit
-                                </button>
-                            </a>
-                        </td>
-                        <td style="border: none" class="col-1">
-                            <button type="button" class="btn btn-danger"
-                                    data-toggle="modal" data-target="#exampleModalCenter"
-                                    onclick="infoDelete(
-                                        <c:out value='${user.id}'/>,
-                                        <c:out value='\"${user.name}\"'/>,
-                                        <c:out value='\"${user.email}\"'/>,
-                                        <c:out value='\"${user.country}\"'/>,
-                                            )">
-                                Delete
-                            </button>
+                        <th class="col-1">No.</th>
+                        <th class="col-1">ID</th>
+                        <th class="col-2">Name</th>
+                        <th class="col-4">Email</th>
+                        <th class="col-2">Country</th>
+                        <th class="col-3" colspan="2" style="text-align: center">Option</th>
                     </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="user" items="${listUser}" varStatus="no">
+                        <tr>
+                            <td><c:out value="${no.count}"/></td>
+                            <td><c:out value="${user.id}"/></td>
+                            <td><c:out value="${user.name}"/></td>
+                            <td><c:out value="${user.email}"/></td>
+                            <td><c:out value="${user.country}"/></td>
+                            <td style="border: none" class="col-1">
+                                <a href="/users?action=edit&id=${user.id}">
+                                    <button type="button" class="btn btn-primary">
+                                        Edit
+                                    </button>
+                                </a>
+                            </td>
+                            <td style="border: none" class="col-1">
+                                <button type="button" class="btn btn-danger"
+                                        data-toggle="modal" data-target="#exampleModalCenter"
+                                        onclick="infoDelete(
+                                            <c:out value='${user.id}'/>,
+                                            <c:out value='\"${user.name}\"'/>,
+                                            <c:out value='\"${user.email}\"'/>,
+                                            <c:out value='\"${user.country}\"'/>,
+                                                )">
+                                    Delete
+                                </button>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+
 
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
