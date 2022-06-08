@@ -14,19 +14,14 @@
 </head>
 <body>
 <center>
-    <h1>User Management</h1>
+    <h1>EDITING USER</h1>
     <h2>
-        <a href="users?action=users">List All Users</a>
+        <a href="users?action=users" class="btn btn-primary">HOME</a>
     </h2>
 </center>
 <div align="center">
     <form method="post">
         <table border="1" cellpadding="5" class="table table-light">
-            <caption>
-                <h2>
-                    Edit User
-                </h2>
-            </caption>
             <c:if test="${user != null}">
                 <input type="hidden" name="id" value="<c:out value='${user.id}' />"/>
             </c:if>
@@ -36,7 +31,7 @@
                     <input type="text" name="name" size="45"
                            value="<c:out value='${user.name}' />"
                     />
-                    <p style="color:red">${erro.get("name")}</p>
+                    <p style="color:red">${error.get("name")}</p>
                 </td>
             </tr>
             <tr>
@@ -45,7 +40,7 @@
                     <input type="text" name="email" size="45"
                            value="<c:out value='${user.email}' />"
                     />
-                    <p style="color:red">${erro.get("email")}</p>
+                    <p style="color:red">${error.get("email")}</p>
                 </td>
             </tr>
             <tr>

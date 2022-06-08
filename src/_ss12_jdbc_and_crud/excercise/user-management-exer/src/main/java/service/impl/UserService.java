@@ -30,7 +30,7 @@ public class UserService implements IUserService {
         } else if (!user.getEmail().matches("^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$")) {
             map.put("email", "Invalid email");
         } else if (user.getCountry() == null) {
-            map.put("email", "Invalid country");
+            map.put("country", "Invalid country");
         } else {
             usersRepository.save(user);
         }
@@ -67,4 +67,6 @@ public class UserService implements IUserService {
     public List<User> searchUser(String name) {
         return usersRepository.search(name);
     }
+
+
 }

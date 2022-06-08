@@ -8,8 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class UsersRepository implements IUsersRepository {
     BaseRepository baseRepository = new BaseRepository();
@@ -20,8 +19,7 @@ public class UsersRepository implements IUsersRepository {
     private static final String SELECT_ALL_USERS = "select * from users order by country;";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
-    private static final String SEARCH_USERS_SQL = "select id, name, email, country from users where name like ?";
-    @Override
+    private static final String SEARCH_USERS_SQL = "select id, name, email, country from users where name like ?";@Override
     public List<User> selectAll() {
         List<User> userList = new ArrayList<>();
         PreparedStatement preparedStatement = null;

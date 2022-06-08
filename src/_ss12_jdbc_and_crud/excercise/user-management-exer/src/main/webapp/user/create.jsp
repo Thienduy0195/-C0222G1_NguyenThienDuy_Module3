@@ -11,49 +11,48 @@
 <head>
     <title>Create New User</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-
 </head>
 <body>
-<center>
-    <div align="center">
+<div class="container" style="margin: 5% auto">
+    <div>
         <a href="/users">
-            <button type="button" class="btn btn-light">Back to List</button>
+            <button type="button" class="btn btn-primary">BACK TO LIST</button>
         </a>
-        <div align="center">
+        <div>
             <form method="post">
                 <caption>
                     <h2>Add New User</h2>
                 </caption>
-                <button type="submit" class="btn btn-primary">Create User</button>
-                <table border="1" cellpadding="5" class="table table-info">
+                <table  border="1" cellpadding="5" class="table table-info col-8">
                     <tbody>
                     <tr>
                         <th>User Name</th>
                         <td>
                             <input type="text" name="name" id="name" size="45">
                         </td>
-                        <p style="color:red">${erro.get("name")}</p>
+                        <p style="color:red">${error.get("name")}</p>
                     </tr>
                     <tr>
                         <th>Email</th>
                         <td>
                             <input type="text" name="email" id="email" size="45">
                         </td>
-                        <p style="color:red">${erro.get("email")}</p>
+                        <p style="color:red">${error.get("email")}</p>
                     </tr>
                     <tr>
                         <th>Country</th>
                         <td>
                             <input type="text" name="country" id="country" size="45">
                         </td>
-                        <p style="color:red">${erro.get("country")}</p>
+                        <p style="color:red">${error.get("country")}</p>
                     </tr>
                     </tbody>
                 </table>
+                <button type="submit" class="btn btn-success">CREATE USER</button>
             </form>
         </div>
     </div>
-</center>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>

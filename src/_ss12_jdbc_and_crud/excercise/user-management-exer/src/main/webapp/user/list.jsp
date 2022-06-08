@@ -15,30 +15,51 @@
         table{
             width: 100%;
         }
+        .header-panel{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button{
+            margin-right: 0.5em;
+        }
+        /*input{*/
+        /*    border-collapse: collapse;*/
+        /*}*/
+        h1{
+            color: limegreen;
+            margin: 0.5em 0.5em;
+        }
     </style>
 </head>
 <body>
 <center>
     <div class="container" align="center">
         <h1>USER MANAGEMENT</h1>
-        <%-- Back to menu --%>
-        <a href="/users">
-            <button type="button" class="btn btn-primary">Home</button>
-        </a>
-        <%-- SEARCH --%>
-        <form action="/users" method="get">
-            <input type="hidden" name="action" value="search">
-            <label>User's name:</label>
-            <input type="text" name="name">
-            <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-        <%-- Create New --%>
-        <a href="/users?action1=create">
-            <button type="button" class="btn btn-primary">Create New</button>
-        </a>
+        <div class="header-panel">
+            <div>
+                <%-- Back to menu --%>
+                <a href="/users">
+                    <button type="button" class="btn btn-primary">Home</button>
+                </a>
+                <%-- Create New --%>
+                <a href="/users?action=create">
+                    <button type="button" class="btn btn-success">Creating New User</button>
+                </a>
+            </div>
+            <div>
+                <%-- SEARCH --%>
+                <form class="search-form" action="/users" method="get">
+                    <input type="hidden" name="action" value="search">
+                    <label class="btn btn-light">User's name:</label>
+                    <input type="text" name="name">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
         <%-- Show List --%>
-        <div align="center">
-            <caption><h2>List of Users</h2></caption>
+        <div class="content" align="center">
+<%--            <caption><h2>List of Users</h2></caption>--%>
                 <table class="table  table-bordered table-secondary round">
                     <thead>
                     <tr>
@@ -97,7 +118,7 @@
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" id="id_delete" name="id">
                                 <div id="name_delete"></div>
-                                <div id="email_delelte"></div>
+                                <div id="email_delete"></div>
                                 <div id="country_delete"></div>
                             </div>
                             <div class="modal-footer">
@@ -119,7 +140,7 @@
     function infoDelete(id, name, email, country) {
         document.getElementById("id_delete").value = id;
         document.getElementById("name_delete").innerText = "Name: " + name;
-        document.getElementById("email_delelte").innerText = "Email " + email;
+        document.getElementById("email_delete").innerText = "Email " + email;
         document.getElementById("country_delete").innerText = "Country: " + country;
     }
 </script>

@@ -45,7 +45,7 @@ public class UserServlet extends HttpServlet {
 
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        User user = userService.selectUser(id);
+//        User user = userService.selectUser(id);
         userService.deleteUser(id);
         List<User> users = userService.selectAllUser();
         request.setAttribute("listUser", users);
@@ -59,18 +59,18 @@ public class UserServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         User user = userService.selectUser(id);
         Map<String, String> map;
-        if (user != null) {
-            user.setName(name);
-            user.setEmail(email);
-            user.setCountry(country);
-            map = userService.updateUser(user);
-            if (map.isEmpty()) {
-                response.sendRedirect("/users");
-            } else {
-                request.setAttribute("erro", map);
-                request.getRequestDispatcher("user/edit.jsp").forward(request, response);
+            if (user != null) {
+                user.setName(name);
+                user.setEmail(email);
+                user.setCountry(country);
+                map = userService.updateUser(user);
+                if (map.isEmpty()) {
+                    response.sendRedirect("/users");
+                } else {
+                    request.setAttribute("error", map);
+                    request.getRequestDispatcher("user/edit.jsp").forward(request, response);
+                }
             }
-        }
     }
 
     private void createUser(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -82,7 +82,7 @@ public class UserServlet extends HttpServlet {
         if (mapCreate.isEmpty()) {
             response.sendRedirect("/users");
         } else {
-            request.setAttribute("erro", mapCreate);
+            request.setAttribute("error", mapCreate);
             request.getRequestDispatcher("user/create.jsp").forward(request, response);
         }
     }

@@ -44,7 +44,7 @@
         </tr>
         <tr>
             <td>
-                <input type="submit" value="Update Product ">
+                <input type="submit" value="Update Product">
             </td>
         </tr>
     </table>
