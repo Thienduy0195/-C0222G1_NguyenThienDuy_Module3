@@ -45,13 +45,14 @@
     </nav>
 </header>
 <div class="container-fluid" align="center">
-    <%--<p>--%>
-    <%--    <c:if test='${requestScope["message"] != null}'>--%>
-    <%--        <span class="message">${requestScope["message"]}</span>--%>
-    <%--    </c:if>--%>
-    <%--</p>--%>
+
     <div class="col-4" >
         <form class="content-create-form" method="post">
+            <p>
+                <c:if test='${requestScope["message"] != null}'>
+                    <span style="color: red" class="message">${requestScope["message"]}</span>
+                </c:if>
+            </p>
             <div class="form-group">
                 <label for="customerId">Enter Customer ID:</label>
                 <input type="text" class="form-control" id="customerId" name="customerId"

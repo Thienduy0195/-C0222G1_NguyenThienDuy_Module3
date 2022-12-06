@@ -12,37 +12,38 @@
     <title>EMPLOYEE MANAGEMENT</title>
     <link rel="stylesheet" href="bootstrap413/css/bootstrap.min.css" />
     <link rel="stylesheet" href="datatables/css/dataTables.bootstrap4.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<div class="container-fluid border col-12 " style="width: 100%; padding: 0 0">
-    <nav class="navbar navbar-expand-lg p-2 my-0 col " style="background: #a71d2a">
+<div class="container-fluid border col-12 " style="width: 100%; padding: 0 0; background-color: #dae0e5">
+    <nav class="navbar navbar-expand-lg p-2 my-0 col ">
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-black-50" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/employee">Employee</a>
+                    <a class="nav-link text-black-50" href="/employee">Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/customer">Customer</a>
+                    <a class="nav-link text-black-50" href="/customer">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/service">Service</a>
+                    <a class="nav-link text-black-50" href="/service">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Contract</a>
+                    <a class="nav-link text-black-50" href="#">Contract</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="/employee" method="get">
                 <select style="margin: 0 0.5em" name="employeePositionSearch" id="">
-                    <option value="0">Choose Position</option>
                     <c:forEach items="${positionList}" var="position">
                         <option value="${position.positionId}">
                                 ${position.positionName}
                         </option>
                     </c:forEach>
+                    <option value="0" spellcheck="false">Choose Position</option>
                 </select>
                 <input type="hidden" name="action" value="search">
                 <input class="form-control mr-sm-2" placeholder="Enter employee's name" type="text"
@@ -54,7 +55,7 @@
 
 
     <div align="center">
-        <table class="table table-striped" id="tableEmployee" style="border-color: #a71d2a">
+        <table class="table table-striped " id="tableEmployee" style="border-color: #a71d2a; margin: 0; background-color: white">
             <thead class="thead-dark">
             <tr>
                 <th>ID</th>
@@ -155,13 +156,12 @@
         <script src="datatables/js/jquery.dataTables.min.js"></script>
         <script src="datatables/js/dataTables.bootstrap4.min.js"></script>
         <script src="bootstrap\bootstrap\js\bootstrap.min.js"></script>
-        <script src="bootstrap\bootstrap\js\jquery-3.6.0.min.js"></script>
 </body>
 </html>
 <script>
     function infoDelete(id, name, mail) {
         document.getElementById("id_delete").value = id;
-        document.getElementById("name_delete").innerText = "Do you want to delete " + name + "?";
+        document.getElementById("name_delete").innerHTML = "Do you want to delete <b style='color: blue'>" +name+ "</b>?";
         document.getElementById("email_delete").innerText = "Email: " + mail;
     }
 </script>

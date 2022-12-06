@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="52a25be3-4722-4e45-b0de-43e01578087d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/_ss00_total_case_study.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/namefor.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/controllers/DocumentPatientServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/models/DocumentPatient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/models/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/repository/DocumentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/repository/IDocumentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/repository/IPatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/repository/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/services/DocumentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/services/IDocumentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/services/IPatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/java/excercise/services/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/webapp/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-final/src/main/webapp/list-document.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-name/src/main/java/exam/controllers/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-name/src/main/java/exam/models/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finish_module3_exe/project-name/src/main/java/exam/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/controllers/DocumentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/models/Document.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/models/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/repository/DocumentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/repository/IDocumentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/repository/IPatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/repository/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/services/DocumentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/services/IDocumentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/services/IPatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/java/excercise/services/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../undate_exe/final_test/src/main/webapp/view/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_ss10_jsp_and_jstl/excercise/calculator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_ss10_jsp_and_jstl/excercise/calculator/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_ss10_jsp_and_jstl/excercise/customer-list-excercise/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_ss10_jsp_and_jstl/excercise/customer-list-excercise/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_ss12_jdbc_and_crud/excercise/user-management-exer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/database/insert_info.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/database/insert_info.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/build/classes/java/main/furama/controllers/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/build/classes/java/main/furama/controllers/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/build/libs/furama-web-casestudy-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/build/libs/furama-web-casestudy-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/java/furama/controllers/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/java/furama/controllers/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/create-customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/create-customer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/customer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/edit-customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/edit-customer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/employee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/service.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../_total_case_jsp_servlet/furama-web-casestudy/src/main/webapp/view/service.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2ALMcRFGZR4WrnyXbvhllckVyKX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52a25be3-4722-4e45-b0de-43e01578087d" name="Default Changelist" comment="" />
+      <created>1654784490707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654784490707</updated>
+      <workItem from="1654784491972" duration="40000" />
+      <workItem from="1656668804039" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1654784529782">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1654784529782" />
+  </component>
+</project>

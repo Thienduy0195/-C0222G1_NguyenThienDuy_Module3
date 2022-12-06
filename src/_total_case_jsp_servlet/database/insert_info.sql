@@ -28,6 +28,7 @@ use furama_resort_case_study;
 -- insert into `user` values ('thienduy@gmail.com','123123');
 -- insert into `user` values ('duytrung@gmail.com','123123');
 -- insert into `user` values ('nhathoang@gmail.com','123123');
+-- insert into `user` values ('admin@gmail.com','123123');
 
 -- Thêm dữ liệu vào bảng employee --
 -- insert into employee (employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone, employee_email, employee_address, position_id, education_degree_id, division_id, user_name)

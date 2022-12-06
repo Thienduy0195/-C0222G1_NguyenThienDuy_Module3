@@ -15,24 +15,24 @@
 </head>
 <body>
 
-<div class="container-fluid border col-12 " style="width: 100%; padding: 0 0">
-    <nav class="navbar navbar-expand-lg p-2 my-0 col " style="background: #a71d2a">
+<div class="container-fluid border col-12 " style="width: 100%; padding: 0 0; background-color: #dae0e5">
+    <nav class="navbar navbar-expand-lg p-2 my-0 col">
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-black-50" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/employee">Employee</a>
+                    <a class="nav-link text-black-50" href="/employee">Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/customer">Customer</a>
+                    <a class="nav-link text-black-50" href="/customer">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/service">Service</a>
+                    <a class="nav-link text-black-50" href="/service">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Contract</a>
+                    <a class="nav-link text-black-50" href="#">Contract</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="/service" method="get">
@@ -46,7 +46,7 @@
 
 
     <div align="center">
-        <table class="table table-striped " id="tableService" style="border-color: #a71d2a; margin: 0">
+        <table class="table table-striped " id="tableService" style="border-color: #a71d2a; margin: 0; background-color: white">
             <thead class="thead-dark">
             <tr>
                 <th>ID</th>
@@ -140,7 +140,6 @@
         <script src="datatables/js/jquery.dataTables.min.js"></script>
         <script src="datatables/js/dataTables.bootstrap4.min.js"></script>
         <script src="bootstrap\bootstrap\js\bootstrap.min.js"></script>
-        <script src="bootstrap\bootstrap\js\jquery-3.6.0.min.js"></script>
 </body>
 </html>
 <script>

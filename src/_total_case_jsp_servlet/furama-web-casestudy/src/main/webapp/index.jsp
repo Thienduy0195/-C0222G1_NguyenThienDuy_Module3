@@ -38,12 +38,12 @@
                 <a href="#" style="font-size: 1.2em ; font-weight: 500">THIÊN DUY</a>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light second-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light second-nav col-md-12 col-sm-12">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div style="margin-left: 5%" class="col-md-7 collapse navbar-collapse first-sub-nav " id="navbarSupportedContent">
+            <div style="margin-left: 5%" class="col-md-7 col-sm-12 collapse navbar-collapse first-sub-nav " id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -68,7 +68,7 @@
 <%--                            <a class="dropdown-item" href="#">Something else here</a>--%>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown col-sm-12 col-md-6">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownService" role="button" data-toggle="dropdown" aria-expanded="false">
                             Service
                         </a>

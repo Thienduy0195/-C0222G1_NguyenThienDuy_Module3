@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,30 +41,16 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
+        Map<String, String> createMap = new HashMap<>();
+        Customer customer = null;
         String customerID = request.getParameter("customerId");
-        Integer customerType = Integer.parseInt(request.getParameter("customerType"));
-        String customerName = request.getParameter("customerName");
-        String customerBirthday = request.getParameter("customerBirthday");
-        Integer customerGender = Integer.parseInt(request.getParameter("customerGender"));
-        String customerIdCard = request.getParameter("customerIdCard");
-        String customerPhone = request.getParameter("customerPhone");
-        String customerEmail = request.getParameter("customerEmail");
-        String customerAddress = request.getParameter("customerAddress");
-        Customer customer = new Customer(customerID, customerType, customerName,
-                customerBirthday, customerGender, customerIdCard,
-                customerPhone, customerEmail, customerAddress);
-        Map<String, String> createMap = customerService.saveCustomer(customer);
-        if (createMap.isEmpty()) {
-            try {
-                response.sendRedirect("/customer");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
+        customer = customerService.selectCustomer(customerID);
+        if(customer!=null){
+            String message = "Customer id is exist!!";
             List<CustomerType> customerTypeList = customerService.getCustomerType();
             request.setAttribute("customerTypeList", customerTypeList);
+            request.setAttribute("message", message);
             request.setAttribute("customer", customer);
-            request.setAttribute("error", createMap);
             try {
                 request.getRequestDispatcher("view/create-customer.jsp").forward(request, response);
             } catch (ServletException e) {
@@ -71,7 +58,40 @@ public class CustomerServlet extends HttpServlet {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }else {
+            Integer customerType = Integer.parseInt(request.getParameter("customerType"));
+            String customerName = request.getParameter("customerName");
+            String customerBirthday = request.getParameter("customerBirthday");
+            Integer customerGender = Integer.parseInt(request.getParameter("customerGender"));
+            String customerIdCard = request.getParameter("customerIdCard");
+            String customerPhone = request.getParameter("customerPhone");
+            String customerEmail = request.getParameter("customerEmail");
+            String customerAddress = request.getParameter("customerAddress");
+            customer = new Customer(customerID, customerType, customerName,
+                    customerBirthday, customerGender, customerIdCard,
+                    customerPhone, customerEmail, customerAddress);
+            createMap = customerService.saveCustomer(customer);
+            if (createMap.isEmpty()) {
+                try {
+                    response.sendRedirect("/customer");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                List<CustomerType> customerTypeList = customerService.getCustomerType();
+                request.setAttribute("customerTypeList", customerTypeList);
+                request.setAttribute("customer", customer);
+                request.setAttribute("error", createMap);
+                try {
+                    request.getRequestDispatcher("view/create-customer.jsp").forward(request, response);
+                } catch (ServletException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+
     }
 
     private void editCustomer(HttpServletRequest request, HttpServletResponse response) {

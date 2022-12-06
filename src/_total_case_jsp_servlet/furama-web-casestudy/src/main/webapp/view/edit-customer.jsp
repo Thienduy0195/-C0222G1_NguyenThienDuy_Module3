@@ -20,24 +20,6 @@
 </head>
 <body>
 <header>
-    <%--    <nav class="navbar navbar-expand-lg first-nav">--%>
-    <%--        <div class="logo col-md-2">--%>
-    <%--            <a class="navbar-brand navbar-expand-lg" href="#"><img src="img/logo-furama.png" height="68"--%>
-    <%--                                                                   width="auto"--%>
-    <%--                                                                   alt="#"></a>--%>
-    <%--        </div>--%>
-    <%--        <div class="col-md-8 address-hotline">--%>
-    <%--            <div style="display: inline; float: left" class="col-md-7 col-sm-6 col-12" id="address">--%>
-    <%--                <p>103 – 105 Đường Võ Nguyên Giáp, Phường Khuê Mỹ, Quận Ngũ hành Sơn, Tp. Đà Nẵng, Việt Nam</p>--%>
-    <%--                <p>7.0 km từ Sân bay Quốc tế Đà Nẵng</p>--%>
-    <%--            </div>--%>
-    <%--            <div style="display: inline; float: left" class="col-md-5 col-sm-6 col-12" id="hotline">--%>
-    <%--                <p>Hotline: 84-236-3847 333/888</p>--%>
-    <%--                <p>Fax: 84-236-3847 999</p>--%>
-    <%--                <p>Email: reservation@furamavietnam.com</p>--%>
-    <%--            </div>--%>
-    <%--        </div>--%>
-    <%--    </nav>--%>
     <nav>
         <nav class="navbar navbar-expand-lg p-2 my-0 col " style="background: #d6d8db">
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
@@ -69,8 +51,9 @@
                 ${message}
             </p>
             <div class="form-group">
+                <label for="customerId">Customer ID:</label>
                 <c:if test="${customer != null}">
-                    <input type="hidden" name="customerId" value="${customer.customerId}"/>
+                    <input class="border-primary" id="customerId" name="customerId"  value="${customer.customerId}" readonly/>
                 </c:if>
             </div>
             <div class="form-group">
